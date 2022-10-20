@@ -5,13 +5,13 @@ basedir = os.path.abspath(os.path.dirname(__file__))
 class Config(object):
     SECRET_KEY = os.environ.get('SECRET_KEY') or 'secret-key'
 
-    BLOB_ACCOUNT = os.environ.get('BLOB_ACCOUNT') or 'mknstorege'
-    BLOB_STORAGE_KEY = os.environ.get('BLOB_STORAGE_KEY') or 'kIyMCUsYZvaqzW9uw48ZyPlmox03rO0nLoVGNpueZG/5kkcfdDZ6MFtf6D/ihrm77GJovozGlqyh+AStjw5sdQ=='
+    BLOB_ACCOUNT = os.environ.get('BLOB_ACCOUNT') or 'mknstore'
+    BLOB_STORAGE_KEY = os.environ.get('BLOB_STORAGE_KEY') or '5ukNDHz+y+mXre42S+bH8wu6Kn9PZx+u3mjmBRHsLw+5MQVYNSbtbaaUASHaMD260QZ/AlrBk3Lq+ASt1Y+dYw=='
     BLOB_CONTAINER = os.environ.get('BLOB_CONTAINER') or 'images'
 
-    SQL_SERVER = os.environ.get('SQL_SERVER') or 'mknserver.database.windows.net'
-    SQL_DATABASE = os.environ.get('SQL_DATABASE') or 'mydb'
-    SQL_USER_NAME = os.environ.get('SQL_USER_NAME') or 'mknserver'
+    SQL_SERVER = os.environ.get('SQL_SERVER') or 'mknserv.database.windows.net'
+    SQL_DATABASE = os.environ.get('SQL_DATABASE') or 'mydatabase'
+    SQL_USER_NAME = os.environ.get('SQL_USER_NAME') or 'udacityadmin'
     SQL_PASSWORD = os.environ.get('SQL_PASSWORD') or 'p@ssword1234'
     # Below URI may need some adjustments for driver version, based on your OS, if running locally
     SQLALCHEMY_DATABASE_URI = 'mssql+pyodbc://' + SQL_USER_NAME + '@' + SQL_SERVER + ':' + SQL_PASSWORD + '@' + SQL_SERVER + ':1433/' + SQL_DATABASE  + '?driver=ODBC+Driver+17+for+SQL+Server'
